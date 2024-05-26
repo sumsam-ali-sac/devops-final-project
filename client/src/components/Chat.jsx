@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import ChatButtonsPanel from "./ChatButtonsPanel";
 import ChatDisplay from "./ChatDisplay";
 import ExpandingTextarea from "./ExpandingTextArea";
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Chat = ({ isSidebarOpen }) => {
@@ -10,14 +9,13 @@ const Chat = ({ isSidebarOpen }) => {
 	const [messages, setMessages] = useState([]);
 	const endOfMessagesRef = useRef(null);
 	const socketRef = useRef(null);
-	const user = useSelector((state) => state.user.user);
 	const navigate = useNavigate();
-	console.log(user);
-	// useEffect(() => {
-	// 	if (!user) {
-	// 		navigate("/sign-in");
-	// 	}
-	// }, [user, navigate]);
+	let user = "user";
+	useEffect(() => {
+		if (!user) {
+			navigate("/sign-in");
+		}
+	}, [user, navigate]);
 
 	useEffect(() => {
 		const socket = new WebSocket("ws://localhost:3001");
