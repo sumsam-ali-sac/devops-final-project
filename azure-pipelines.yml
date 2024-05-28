@@ -36,15 +36,15 @@ jobs:
         npm test
       displayName: 'Run Tests with Both Frontend and Backend Running'
 
+    - task: CopyFiles@2
+      inputs:
+        Contents: |
+          client/dist/**
+          api/**
+        TargetFolder: $(Build.ArtifactStagingDirectory)
 
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '$(System.DefaultWorkingDirectory)/client/dist'
-        ArtifactName: 'frontend'
-      displayName: 'Publish Frontend Build Artifacts'
-
-    - task: PublishBuildArtifacts@1
-      inputs:
-        PathtoPublish: '$(System.DefaultWorkingDirectory)/api/node/dist'
-        ArtifactName: 'backend'
-      displayName: 'Publish Backend Build Artifacts'
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
