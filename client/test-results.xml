@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="6" failures="0" errors="0" time="104.373">
-    <testsuite name="__tests__/integration/selenium/selenium.test.jsx" timestamp="2024-05-29T14:47:30.648Z" hostname="Sumsam" tests="6" failures="0" errors="0" skipped="0" time="0.068">
-        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="ExpandingTextarea Component &gt; should render without crashing" time="0.023">
+<testsuites name="vitest tests" tests="6" failures="0" errors="0" time="1.523">
+    <testsuite name="__tests__/integration/selenium/selenium.test.jsx" timestamp="2024-05-29T14:50:44.526Z" hostname="Sumsam" tests="6" failures="0" errors="0" skipped="0" time="0.072">
+        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="ExpandingTextarea Component &gt; should render without crashing" time="0.024">
         </testcase>
-        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="ExpandingTextarea Component &gt; should expand the textarea on input" time="0.01">
+        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="ExpandingTextarea Component &gt; should expand the textarea on input" time="0.011">
         </testcase>
-        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="ExpandingTextarea Component &gt; should reset the textarea on send" time="0.01">
+        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="ExpandingTextarea Component &gt; should reset the textarea on send" time="0.008">
         </testcase>
-        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="ExpandingTextarea Component &gt; should not send empty messages" time="0.003">
+        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="ExpandingTextarea Component &gt; should not send empty messages" time="0.004">
         </testcase>
-        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="Chat Component &gt; should render without crashing" time="0.011">
+        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="Chat Component &gt; should render without crashing" time="0.012">
         </testcase>
-        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="Chat Component &gt; should send message through WebSocket" time="0.01">
+        <testcase classname="__tests__/integration/selenium/selenium.test.jsx" name="Chat Component &gt; should send message through WebSocket" time="0.012">
         </testcase>
     </testsuite>
 </testsuites>
