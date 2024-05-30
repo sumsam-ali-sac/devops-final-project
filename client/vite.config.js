@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
 
 	return {
 		build: {
-			outDir: "../api/client_build",
+			outDir: "build",
 		},
 		server: {
 			proxy: {
