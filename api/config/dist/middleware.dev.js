@@ -16,15 +16,14 @@ var _dotenv = require("dotenv");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 (0, _dotenv.config)();
-process.env.VITE_WS_URL;
+var ws_url = process.env.VITE_WS_URL;
 
 function setupMiddlewares(app) {
   app.use((0, _helmet["default"])({
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        connectSrc: ["'self'", "ws://localhost:8080"] // Adjust according to your needs
-
+        connectSrc: ["'self'", ws_url]
       }
     }
   }));
