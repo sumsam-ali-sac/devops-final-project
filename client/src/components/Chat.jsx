@@ -17,8 +17,9 @@ const Chat = ({ isSidebarOpen }) => {
 		}
 	}, [user, navigate]);
 
+	let websocket_url = import.meta.env.VITE_WS_URL;
 	useEffect(() => {
-		const socket = new WebSocket("ws://localhost:3001");
+		const socket = new WebSocket(websocket_url);
 		socketRef.current = socket;
 
 		socket.onmessage = (event) => {
