@@ -12,9 +12,9 @@ dotenvConfig();
 const app = express();
 setupMiddlewares(app);
 
-app.use(express.static(path.join(__dirname, "client_build")));
+app.use(express.static(path.join(__dirname, "build")));
 app.get("*", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "client_build", "index.html"));
+	res.sendFile(path.resolve(__dirname, "build", "index.html"));
 });
 
 const server = createServer(app);

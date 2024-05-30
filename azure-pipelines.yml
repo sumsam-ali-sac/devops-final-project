@@ -38,8 +38,8 @@ jobs:
       displayName: 'Run Selenium tests'
 
     - script: |
-        mkdir -p api/client_build
-        cp -R client/build/* api/client_build/
+        mkdir -p api/build
+        cp -R client/build/* api/build/
       displayName: 'Copy client build to api folder'
 
     - script: |
